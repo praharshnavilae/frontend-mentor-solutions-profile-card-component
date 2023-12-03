@@ -1,0 +1,167 @@
+:root {
+    
+    --background-clr: hsl(185, 75%, 39%);
+    --primary-font-clr:  hsl(230, 20%, 36%); 
+    --secondary-font-clr: hsl(0, 0%, 59%);
+
+    --font-family-default: 'Kumbh Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+*, *::before, *:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+
+body {
+    background-color: var(--background-clr);
+    font-family: var(--font-family-default);
+    font-size: 0.85rem;
+    font-weight: var(--fw-regular);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+/* .bg-top img {
+    width: 250%;
+}
+
+.bg-bottom {
+    width: 150%
+} */
+
+.bg-top {
+    position: absolute;
+    bottom: 15rem;
+    right: 47rem;
+    z-index: -1;
+}
+
+.bg-bottom {
+    position: absolute;
+    top: 20rem;
+    left: 45rem;
+    z-index: -1;
+}
+
+@media (max-width: 400px) {
+
+    body {
+        overflow: hidden;
+        min-height: 130vh;
+    }
+
+    .bg-top {
+        position: absolute;
+        bottom: 27rem;
+        right: 12rem;
+        z-index: -1;
+        width: 150%;
+    }
+
+    .bg-bottom {
+        position: absolute;
+        top: 18rem;
+        left: 11rem;
+        z-index: -1;
+        width: 150%;
+    }
+
+    .profile-card-component {
+        background-color: white;
+        border-radius: 1rem;
+        width: 20rem;
+        height: 23rem;
+        overflow: hidden;
+        display: grid;
+        place-items: start;
+    }
+}
+
+.profile-card-component {
+    position: relative;
+    background-color: white;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 23rem;
+    overflow: hidden;
+
+    display: grid;
+    place-items: start;
+}
+
+.profile {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    z-index: 1;
+    width: 6.5rem;
+    border-radius: 50%;
+    border: 5px solid white
+}
+
+.profile-details {
+    position: relative;
+    top: 20%;
+    right: 5%;
+    color: var(--secondary-font-clr);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 100%;
+    line-height: 1.5rem;
+}
+
+.name {
+    color: var(--primary-font-clr);
+    font-size: 1.1rem;
+    font-weight: var(--fw-bold);
+}
+
+.name span {
+    color: var(--secondary-font-clr);
+    font-size: 1rem;
+    font-weight: var(--fw-regular);
+    margin-left: 0.5rem;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-top: 2px solid hsl(0, 0%, 94%);
+    text-align: center;
+    width: 100%;
+}
+
+.profile-stats h2 {
+    color: var(--primary-font-clr);
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+}
+
+.profile-stats p {
+    color: var(--secondary-font-clr);
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    line-height: 1.4rem;
+
+}
+
+
+
+
+
+
